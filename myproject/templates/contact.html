@@ -1,0 +1,76 @@
+{% extends 'base.html'%}
+{% load static %}
+
+ {% block childpage %}
+<style>
+  .form-control
+  {
+  height:50px;
+  }
+</style>
+                                   <!----headind---->
+<div class="row heading text-center py-4">
+  <div class="col-sm-6 mx-auto">
+  <p class="fs-3"> Contact <b class="txt-color1">Us <i class="fa-solid fa-phone"></i></b></p>
+    <i>You may contact us by contact number or fill this form any time you need professional support or have any question.</i>
+  </div>
+</div>
+                                  <!----end heading-->
+<div class="row">
+  <div class="col-sm-10 mx-auto">
+    <div class="row">
+      <div class="col-sm-7">
+
+        <form autocomplete="off" method="post">
+            {% csrf_token %}
+          Name<br><input type="text" name="name" class="form-control shadow-lg mb-2 bg-body-tertiary rounded-0" placeholder="Enter your Name.."required/>
+           Email<br><input type="email" name="email" class="form-control shadow-lg mb-2 bg-body-tertiary rounded-0" placeholder="Enter your email.."required/>
+           Mobile<br><input type="text" name="mobile" class="form-control shadow-lg mb-2 bg-body-tertiary rounded-0" placeholder="Enter your mobile.no"required/>
+          Message<br>
+          <textarea class="form-control shadow-lg mb-4 bg-body-tertiary rounded-0" placeholder="message" name="msg" style="height:90px;"></textarea></br>
+          <input type="submit" value="save"
+                 class="form-control shadow-lg mb-2  rounded-0 bg-mycolor1 text-light w-25"/>
+        </form>
+      </div>
+                                  <!---contact us---->
+      <div class="col-sm-5">
+        <div class="row shadow-lg mb-2 bg-body-tertiary rounded-0 ">
+          <div class="col-sm-12 p-5">
+            <h4>Contact Info</h4>
+               <h5 class="txt-color1 p-2 "><i class="fa-solid fa-location-dot"></i>Office Address</h5>
+      <p class="px-4">  Plot No-43, Behind H.P Petrol Pump,<br>
+Tedhi Pulia Ring Rd, Sector 5,</br>
+Vikas Nagar, Lucknow<br>
+Uttar Pradesh 226022</p>
+                         <h5 class="txt-color1 p-2"><i class="fa-solid fa-phone"></i>Call Us</h5>
+       <P class="px-4">+91 8736010897 ,+91 7565929202 </br>
+                       +91 7518833232 , +91 6306655012
+            </P>
+<h5 class="txt-color1 px-2 "><i class="fa-solid fa-envelopes-bulk"></i>Mail us</h5>
+          <P class="px-4">  niteshsri0002@gmail.com></P>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+                                  <!---endcontact us---->
+
+                                       <!----map--->
+<div class="row heading text-center py-4">
+  <div class="col-sm-6 mx-auto">
+  <p class="fs-3">Find <b class="txt-color1">on Google Map</b></p>
+    <i>organizations to achieve their educational goals through innovative</i>
+    </div>
+  </div>
+</div>
+
+<div class="row mb-5">
+  <div class="col-sm-10 mx-auto">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.161301648797!2d80.96384467522381!3d26.89837547665573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39995785d5f7f1a5%3A0xffa47f1efe103f0d!2sTechpile%20Technology%20Pvt.%20Ltd.%20%7C%7C%20Internet%20website%20developers!5e0!3m2!1sen!2sin!4v1726582926287!5m2!1sen!2sin" class="w-100" style="border:0; min-height:400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+                                      <!----end map--->
+{% endblock %}

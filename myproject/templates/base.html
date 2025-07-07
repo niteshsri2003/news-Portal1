@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="{% static 'css/bootstrap.css'%}" rel="stylesheet"/>
+  <link href="{% static 'css/all.css'%}" rel="stylesheet"/>
+    <style>
+        body
+        {
+           overflow-x:hidden;
+        }
+        :root
+        {
+        --bgcolor1:#b20809;
+        --bgcolor2:#313131;
+        --bgcolor3:#ffb634;
+        }
+        .bg-mycolor1
+        {
+        background:var(--bgcolor1);
+        }
+        .bg-mycolor2
+        {
+        background:var(--bgcolor2);
+        }
+        .bg-mycolor3
+        {
+        background:var(--bgcolor3);
+        }
+        .txt-color1
+        {
+        color:var(--bgcolor1);
+        }
+           .txt-color2
+        {
+        color:var(--bgcolor2);
+        }
+           .txt-color3
+        {
+        color:var(--bgcolor3);
+        }
+        .t1 a
+        {
+        text-decoration:none;
+        color:white;
+
+        }
+        .t1
+        {
+        font-size:14px;
+        }
+        .ic
+        {
+        border:1px solid white;
+        height:20px;
+        width:20px;
+        text-align:center;
+        line-height:20px;
+        border-radius:1px
+        transition:all .5s;
+        }
+        .ic:hover
+        {
+        border:1px solid var(--bgcolor3);
+        color:var(--bgcolor3);
+        transform:rotate(360deg);
+        transition:all .5s;
+        }
+        #menu
+        {
+        background:transparent !important;
+
+        }
+        #menu ul li a
+        {
+        color:white;
+        }
+        .bt:hover
+        {
+         border:2px solid red !important;
+         color:red !important;
+         background:white;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row t1 bg-mycolor2 text-light text-center py-1 ">
+        <div class="col-sm-3">
+            <a href="/faqs">FAQs</a> |
+            <a href="/about">About US</a> |
+            <a href="/contact/">Contact & Support</a>
+        </div>
+        <div class="col-sm-3">
+            <i class="fa-solid fa-phone ic"></i>
+            +91 8736010897, +91 7518833232
+        </div>
+        <div class="col-sm-3">
+            <i class="fa-solid fa-envelope ic"></i>
+            niteshsri0002@gmail.com
+        </div>
+        <div class="col-sm-3">
+             <a href="https://facebook.com/techpilelko" targeet="blank" style=" color:blue; text-descriptins"><i class="fa-brands fa-facebook ic"></i></a>
+<a href="https://youtube.com/techpilelko"target="blank" style="color:red; text-descriptins "  ><i class="fa-brands fa-youtube ic"></i></a>
+<i class="fa-brands fa-x-twitter ic"></i>
+<a href="https://instagram.com/tptlko" target="_blank" style="color:red;"><i class="fa-brands fa-instagram ic"></i></a>
+
+        </div>
+
+    </div>
+    <div class="row t2 py-3 mx-auto ">
+        <div class="col-sm-4 fs-1 text-center ps-1">
+
+            Global<b class="txt-color1 fs-2">India24X7 <i class="fa-solid fa-newspaper"></i></b>
+        </div>
+        <div class="col-sm-5  text-center  fs-3">
+            <p class="m-0 p-0"> <b class="fs-2">Welcome to Global</b> <b class="txt-color1 "> India <br> 24X7 News</b></p>
+
+
+        </div>
+
+        <div class="col-sm-3 text-center ps-3 pt-2">
+            <a href="/contact/" class="btn btn-sm bg-mycolor1 text-light bt fs-4 " ><i class="fa-regular fa-address-book"></i>&nbsp;Contact Us</a>
+        </div>
+    </div>
+
+    <div class="row menu bg-mycolor1 sticky-top" style="min-height:40px;">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <!-- start menu -->
+            <nav class="navbar navbar-expand-lg bg-body-tertiary bg p-0" id="menu">
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/home/"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/news/"><i class="fa-solid fa-newspaper"></i> News</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="/videonews/"><i class="fa-solid fa-video"></i> Video News</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="/about/"><i class="fa-solid fa-address-card"></i> About us</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="/jobs/"><i class="fa-solid fa-briefcase"></i> Jobs</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="/faqs/"><i class="fa-solid fa-question"></i> FAQs</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="/contact/"><i class="fa-solid fa-address-book"></i> Contact Us</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="/admin/"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+            <!-- end menu -->
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <!---child-->
+    <div class="row">
+        <div class="col-sm-12" style="min-height:500px;">
+            {% block childpage %}
+
+            {% endblock %}
+        </div>
+    </div>
+
+<div class="row detail shadow p-3  bg-body-tertiary rounded" style="min-height:250px;">
+    <div class="col-sm-4">
+        <h3 class="txt-color1">Company</h3>
+        About us<br>
+        Support<br>
+        Privacy Policy<br>
+        Investers<br>
+    </div>
+    <div class="col-sm-4">
+        <h3  class="txt-color1">Quick Links</h3>
+        Daily news<br/>
+        Category<br/>
+        LogIn<br>
+        Register<br>
+
+
+
+    </div>
+    <div class="col-sm-4">
+        <h3  class="txt-color1">Contact US</h3>
+        <i class="fa-solid fa-phone ic"></i>
+            +91 000000000 , 0542 13456
+<br/>
+           <i class="fa-solid fa-envelope ic"></i>
+            Globalnews24@gmail.com
+<br/>
+        Social Media <a href="https://facebook.com/techpilelko" targeet="blank" style=" text-descriptins"><i class="fa-brands fa-facebook ic"></i></a> |
+<a href="https://youtube.com/techpilelko"target="blank" style="color:red; text-descriptins "  ><i class="fa-brands fa-youtube ic"></i></a>     |
+ <i class="fa-brands fa-x-twitter ic"></i>  |
+<a href="https://instagram.com/tptlko" target="_blank" style="color:red;"><i class="fa-brands fa-instagram ic"></i></a>
+<br/>
+        Feedback<br/>
+        FAQs
+
+    </div><br/>
+    <div class="row ufooter">
+    <div class="col-sm-12 text-center pt-1" style="min-height:50px;"> Global<b class="txt-color1 fs-3">India24X7 <i class="fa-solid fa-newspaper"></i></b>
+    <p class="pb-0 pt-0">Park street 24A Tedipuliya <br/>Luccknow 206028 UTTAR PRADESH</p>
+    </div>
+
+</div>
+</div>
+<div class="row bfooter" style="min-height:40px; color:white; line-height:40px;">
+        <div class="col-sm-1 bg-mycolor2"></div>
+    <div class="col-sm-5 bg-mycolor2 " > Developed by <b class="txt-color1"><a href="/portfolio/" style="text-decoration:none;">Nitesh Srivastava</a></b>
+
+    </div>
+    <div class="col-sm-5 bg-mycolor2 text-end " >Follow us : <i class="fa-brands fa-facebook">   |</i>
+<i class="fa-brands fa-youtube">    |</i>
+<i class="fa-brands fa-x-twitter">  |</i>
+<i class="fa-brands fa-instagram"></i>
+</div>
+    <div class="col-sm-1 bg-mycolor2"></div>
+</div>
+<script src="{% static 'js/bootstrap.bundle.js'%}">
+
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+{% load static %}
+ {% block childpage %}
+
+<div class="row heading text-center py-4">
+  <div class="col-sm-6 mx-auto">
+  <p class="fs-3"> News <b class="txt-color1">Details <i class="fa-solid fa-newspaper"></i></b></p>
+    <i>Read the full news here.</i>
+      <hr/>
+  </div>
+</div>
+<!---endheading-->
+<div class="row">
+    <div class="col-sm-7 mx-auto shadow-lg mb-4 p-5">
+        <div class="row">
+<!---news sections--->
+            {% for i in ndata %}
+            <div class="col-sm-12">
+                <p class="text-muted"><b>{{i.news_city}}</b>|<b>{{i.news_category}}</b> <i class="float-end"> posted Date : {{i.posted_data}}</i ></p>
+                <h2>{{i.headline}}</h2>
+                <img src="../{{i.news_picture}}" class="img-thumbnail w-100"/>
+                <p>{{i.news_descriptions}}</p>
+            </div>
+            {% endfor %}
+            <!--end news-->
+            <!---news sections2--->
+             {% for i in sdata %}
+
+            <div class="col-sm-12">
+              <h3>
+                  {{i.title}}
+              </h3>
+                <img src="../{{i.picture}}" class="img-thumbnail w-100"/>
+                <p>
+                    {{i.description}}
+                </p>
+            </div>
+            {% endfor %}
+            <!---end newsection2-->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

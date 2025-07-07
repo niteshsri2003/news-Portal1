@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block childpage %}
+<!--start heading-->
+<div class="row heading text-center py-4" xmlns="http://www.w3.org/1999/html">
+<div class="col-sm-6 mx-auto">
+    <p class="fs-3">Latest <b class="txt-color1">Jobs Here</b></p>
+    <i> You can find the latest job opening by just a click</i>
+    <hr/>
+</div>
+</div>
+<!--end heading-->
+<div class="row">
+    <div class="col-sm-10 mx-auto">
+<div class="row">
+    {% for x in jobsdata %}
+    <div class="col-sm-6 text-center ">
+        <div class="card p-3 border-0 rouded-0 shadow-lg mb-3">
+            <a href="{{x.title_link}}" traget="_blank">{{x.title}}<br/></a>
+            <b style="font-size:12px;">
+                 <i class="fa-solid fa-calendar-days txt-color1"></i>
+                posted Date :{{x.posted_data}}</b>
+
+        </div>
+    </div>
+    {% endfor %}
+</div>
+        </div>
+    </div>
+{% endblock %}

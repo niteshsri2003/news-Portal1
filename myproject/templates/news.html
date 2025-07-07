@@ -1,0 +1,94 @@
+{% extends 'base.html'%}
+{% load static %}
+
+ {% block childpage %}
+<style>
+    .form-control
+    {
+      height:55px;
+      border-redius:0px !important;
+    }
+     .input-group-text inpu
+    {
+      background:tranparent;
+      color:white;
+      height:50px;
+      border:none;
+
+    }
+</style>
+                                  <!----headind---->
+<div class="row heading text-center py-4">
+  <div class="col-sm-6 mx-auto">
+  <p class="fs-3"> Our <b class="txt-color1">News <i class="fa-solid fa-newspaper"></i></b></p>
+    <i>You Latest News Breaking News.</i>
+   <hr/>
+  </div>
+</div>
+                                  <!----end heading-->
+<!---start searching section--->
+<div class="row">
+    <div class="col-sm-6 mx-auto">
+        <form>
+        <div class="input-group shadow-lg mb-3">
+
+            <input type="text" name="search" class="form-control" placeholder="search"..>
+            <i class="input-group-text bg-mycolor1 p-0 rounded-0">
+                <input type="submit" value="search"/>
+            </i>
+        </div>
+            </form>
+    </div>
+</div>
+
+
+
+<dvi class="row">
+ <div class="col-sm-10 mx-auto">
+  {% for i in citydata %}
+  <a href="/news?cityid={{i.id}}" class="badge bg-mycolor1 text-light rounded-pill">{{i.city_name}}</a>
+    {% endfor %}
+ </div>
+</dvi>
+
+<div class="row">
+ <div class="col-sm-10 mx-auto">
+  <div class="row">
+   <div class="col-sm-3 my-3">
+  <ul class="list-group">
+  <li class="list-group-item bg-mycolor1 text-light"><b>category</b></li>
+               {% for x in categorydata %}
+ <a href="/news?catid={{x.id}}" style="text-decoration:none;"> <li class="list-group-item">{{x.category_name}}</li></a>
+               {% endfor %}
+
+      <a href="/news/" style="text-decoration:none;"> <li class="list-group-item">All News</li></a>
+
+</ul>
+
+   </div>
+   <div class="col-sm-9">
+
+     {% for i in ndata %}
+            <div class="card border-0 shadow p-2 mb-2 bg-body-tertiary rounded">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="../{{i.news_picture}}" style="max-height:300px;" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title" style="height:80px; overflow-y:auto;">{{i.headline}}</h5>
+          <b>{{i.news_category}} News | {{i.news_city}}</b></br/>
+        <p class="card-text"><small class="text-body-secondary">Posted Date : {{i.posted_data}}</small>
+          <a href="/newsdetails?nid={{i.id}}" class="badge bg-mycolor1 rounded-pill text-light" style="text-decoration:none;">View more <i class="fa-solid fa-eye"></i></a></p>
+      </div>
+    </div>
+  </div>
+</div>
+                {% endfor %}
+
+   </div>
+  </div>
+ </div>
+</div>
+
+{% endblock %}
